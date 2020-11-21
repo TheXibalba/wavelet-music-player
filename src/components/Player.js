@@ -27,7 +27,7 @@ useEffect(()=>{
     
    
     setSongs(newSongs);
-},[currentSong]);
+},[currentSong, setSongs, songs]);
   //Handlers
 
   const playSongHandler = () => {
