@@ -5,7 +5,7 @@ import Song from "./components/Song";
 import "./styles/app.scss";
 import Library from "./components/Library";
 import Nav from "./components/Nav";
-
+import "input-range-scss";
 function App() {
 
   const [songs, setSongs] = useState(data());
@@ -27,6 +27,18 @@ function App() {
     const duration = e.target.duration;
     setSongInfo({ ...songInfo, currentTime: current, duration: duration });
   };
+  const songEndHandler=async(e)=>{
+    let currentIndex=songs.findIndex((song)=>song.id===currentSong.id);
+     await setCurrentSong(songs[(currentIndex+1)%songs.length]);
+     if(isPlaying){
+
+       audioRef.current.play();
+     }
+    
+  }
+
+
+
   return (
     <div className="App">
     <Nav libraryStatus={libraryStatus} setLibraryStatus={setLibraryStatus} /> 
@@ -52,6 +64,7 @@ function App() {
         isPlaying={isPlaying}
       />
       <audio
+      onEnded={songEndHandler}
         onLoadedMetadata={timeUpdateHandler}
         onTimeUpdate={timeUpdateHandler}
         ref={audioRef}

@@ -8,7 +8,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 const Player = ({ setSongs, songInfo,setSongInfo,currentSong, isPlaying, setIsPlaying,audioRef,songs,setCurrentSong }) => {
-//useEffect
+//useEffect: update the UI when a song has been skipped
 useEffect(()=>{
   const newSongs=songs.map((song)=>{
             if(song.id===currentSong.id){
@@ -27,7 +27,7 @@ useEffect(()=>{
     
    
     setSongs(newSongs);
-},[currentSong, setSongs, songs]);
+},[currentSong]);
   //Handlers
 
   const playSongHandler = () => {
@@ -53,29 +53,24 @@ useEffect(()=>{
     setSongInfo({ ...songInfo, currentTime: e.target.value });
   };
 
-    const skipTrackHandler=(direction)=>{
+    const skipTrackHandler= async (direction)=>{
       let currentIndex=songs.findIndex((song)=>song.id===currentSong.id);
       if(direction==="forward"){
-        setCurrentSong(songs[(currentIndex+1)%songs.length]);
+       await setCurrentSong(songs[(currentIndex+1)%songs.length]);
       }else if(direction==="back"){
         if(currentIndex<=0){
 
-          setCurrentSong(songs[(songs.length-1)]);
+          await  setCurrentSong(songs[(songs.length-1)]);
 
         }else{
 
-          setCurrentSong(songs[(currentIndex-1)%songs.length]);
+          await  setCurrentSong(songs[(currentIndex-1)%songs.length]);
         }
 
       }
       if (isPlaying) {
-      const playPromise = audioRef.current.play();
-      if (playPromise !== undefined) {
-        playPromise.then(() => {
-          audioRef.current.play();
-        });
+     audioRef.current.play();
       }
-    }
     };
  
   return (
