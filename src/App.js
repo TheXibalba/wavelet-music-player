@@ -6,19 +6,22 @@ import "./styles/app.scss";
 import Library from "./components/Library";
 import Nav from "./components/Nav";
 import "input-range-scss";
-function App() {
+
+function App({device}) {
+  
 
   const [songs, setSongs] = useState(data());
   const [currentSong, setCurrentSong] = useState(songs[0]);
   const [isPlaying, setIsPlaying] = useState(false);
+  
   //Timer
  
   const [songInfo, setSongInfo] = useState({
     currentTime: 0,
     duration: 0,
   });
-
-  const [libraryStatus,setLibraryStatus]=useState(true);
+ 
+  const [libraryStatus,setLibraryStatus]=useState(device);
 
   //useRef's
   const audioRef = useRef(null);
