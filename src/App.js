@@ -6,6 +6,7 @@ import "./styles/app.scss";
 import Library from "./components/Library";
 import Nav from "./components/Nav";
 import "input-range-scss";
+import Footer from "./components/Footer";
 
 function App({device}) {
   
@@ -59,13 +60,16 @@ function App({device}) {
         currentSong={currentSong}
       />
       <Library
-      libraryStatus={libraryStatus}
+      setLibraryStatus={setLibraryStatus}
+        device={device}
+        libraryStatus={libraryStatus}
         setSongs={setSongs}
         audioRef={audioRef}
         songs={songs}
         setCurrentSong={setCurrentSong}
         isPlaying={isPlaying}
       />
+      <Footer/>
       <audio
       onEnded={songEndHandler}
         onLoadedMetadata={timeUpdateHandler}

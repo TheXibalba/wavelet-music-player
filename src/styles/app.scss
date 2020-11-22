@@ -2,8 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
- 
-  
+    overflow: hidden;
 }
 
 h1,h2,h3{
@@ -42,3 +41,4 @@ transition: all 0.3s ease;
 @import "./player";
 @import "./library";
 @import "./nav";
+@import "./footer";

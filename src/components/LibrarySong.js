@@ -1,6 +1,6 @@
 import React from "react";
 
-const LibrarySong = ({ song,songs, setCurrentSong, audioRef, isPlaying, id,setSongs }) => {
+const LibrarySong = ({ song,songs, setCurrentSong, audioRef, isPlaying, id,setSongs,setLibraryStatus,device }) => {
   const songSelectHandler = async(e) => {
       await  setCurrentSong(song);
     //setting active state of other songs to false
@@ -22,6 +22,7 @@ const LibrarySong = ({ song,songs, setCurrentSong, audioRef, isPlaying, id,setSo
     
    
     setSongs(newSongs);
+    setLibraryStatus(device?true:false);
     if (isPlaying) {
       audioRef.current.play();
       
