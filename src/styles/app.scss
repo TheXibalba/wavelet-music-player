@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+ 
+  
 }
 
 h1,h2,h3{
@@ -22,6 +24,19 @@ transition: all 0.3s ease;
 .library-active{
     margin-left:10% ;
 }
+.rotate-song-img{
+    animation: rotate-song 10s linear infinite;
+    
+   }
+
+   @keyframes rotate-song{
+    from{
+        transform:rotate(0deg);
+  
+    }to{
+        transform:rotate(360deg);
+    }
+  }
 
 @import "./song";
 @import "./player";

@@ -4,7 +4,7 @@
     left:0;
     width:18rem;
     height:100%;
-    background-color: white;
+    background-color: #f4f6ff;
     box-shadow: 2px 2px 50px rgb(207, 207, 207);
     overflow: scroll;
     transform:translateX(-100%);
@@ -25,11 +25,14 @@
     transition: background-color 0.5s ease;
     img{
         width:30%;
+       
     }
     &:hover{
         background-color: rgb(164, 185, 243);
+        
     }
 }
+
 
 .song-description{
     padding-left:1rem;
