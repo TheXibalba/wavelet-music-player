@@ -18,7 +18,7 @@ function App() {
     duration: 0,
   });
 
-  const [libraryStatus,setLibraryStatus]=useState(false);
+  const [libraryStatus,setLibraryStatus]=useState(true);
 
   //useRef's
   const audioRef = useRef(null);
@@ -30,8 +30,8 @@ function App() {
   const songEndHandler=async(e)=>{
     let currentIndex=songs.findIndex((song)=>song.id===currentSong.id);
      await setCurrentSong(songs[(currentIndex+1)%songs.length]);
-     if(isPlaying){
 
+     if(isPlaying){
        audioRef.current.play();
      }
     
