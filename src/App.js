@@ -33,14 +33,29 @@ function App({device}) {
   };
   const songEndHandler=async(e)=>{
     let currentIndex=songs.findIndex((song)=>song.id===currentSong.id);
+    let nextIndex=songs.findIndex((song)=>song.id===currentSong.id)+1;
+    
      await setCurrentSong(songs[(currentIndex+1)%songs.length]);
-
+     const newSongs=await songs.map((song,index)=>{
+      if(index===nextIndex){
+          return{
+              ...song, 
+              active:true,
+          };
+      }else{
+              return{
+                  ...song,
+                  active:false,
+              };
+          }
+      
+  }); 
+ await setSongs(newSongs);
      if(isPlaying){
        audioRef.current.play();
      }
-    
-  }
-
+     
+  };
 
 
   return (
