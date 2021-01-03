@@ -2,6 +2,17 @@ import { v4 as uuidv4 } from "uuid";
  const data=()=> {
   return [
     {
+      name: "Until Forever",
+      cover:
+        "https://i.ibb.co/2jQt04M/until-forever-by-gydw1n-de86bh5-fullview.jpg",
+      artist: "Yasumu",
+      audio: "https://archive.org/download/yasumu-until-forever-1/Yasumu%20-%20Until%20Forever~1.mp3",
+      color: ["#205950", "#2ab3bf"],
+      id: uuidv4(),
+      active: true,
+    }
+    ,
+    {
       name: "Maple Leaf",
       cover:
         "https://chillhop.com/wp-content/uploads/2020/09/2899f7cc22ab12e17d0119819aac3ca9dbab46e6-1024x1024.jpg",
