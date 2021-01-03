@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from "uuid";
     {
       name: "Until Forever",
       cover:
-        "https://i.ibb.co/2jQt04M/until-forever-by-gydw1n-de86bh5-fullview.jpg",
+        "https://i.ibb.co/7N0sQmS/until-forever-by-gydw1n-de86bh5-fullview-Cropped.jpg",
       artist: "Yasumu",
       audio: "https://archive.org/download/yasumu-until-forever-1/Yasumu%20-%20Until%20Forever~1.mp3",
       color: ["#205950", "#2ab3bf"],
@@ -20,7 +20,7 @@ import { v4 as uuidv4 } from "uuid";
       audio: "https://mp3.chillhop.com/serve.php/?mp3=10243",
       color: ["#205950", "#2ab3bf"],
       id: uuidv4(),
-      active: true,
+      active: false,
     },
     {
       name: "Beaver Creek",
