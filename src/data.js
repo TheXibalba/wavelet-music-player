@@ -94,10 +94,6 @@ import { v4 as uuidv4 } from "uuid";
       id: uuidv4(),
       active: false,
     },
-<<<<<<< HEAD
-
-=======
->>>>>>> 4c7d5125270d4587914ce7afbf647bbd6d4966b8
     //ADD MORE HERE
     
   ];
