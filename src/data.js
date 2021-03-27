@@ -2,7 +2,6 @@ import { v4 as uuidv4 } from "uuid";
  const data=()=> {
   return [
     {
-<<<<<<< HEAD
       name: "Your Best Option",
       cover:
         "https://i.ibb.co/vJbJWPr/your-Best-Image.jpg",
@@ -15,8 +14,6 @@ import { v4 as uuidv4 } from "uuid";
     
     
     {
-=======
->>>>>>> 4c7d5125270d4587914ce7afbf647bbd6d4966b8
       name: "Until Forever",
       cover:
         "https://i.ibb.co/7N0sQmS/until-forever-by-gydw1n-de86bh5-fullview-Cropped.jpg",
@@ -24,11 +21,7 @@ import { v4 as uuidv4 } from "uuid";
       audio: "https://archive.org/download/yasumu-until-forever-1/Yasumu%20-%20Until%20Forever~1.mp3",
       color: ["#205950", "#2ab3bf"],
       id: uuidv4(),
-<<<<<<< HEAD
       active: false,
-=======
-      active: true,
->>>>>>> 4c7d5125270d4587914ce7afbf647bbd6d4966b8
     }
     ,
     {
