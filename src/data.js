@@ -6,7 +6,7 @@ import { v4 as uuidv4 } from "uuid";
       cover:
         "https://i.ibb.co/vJbJWPr/your-Best-Image.jpg",
       artist: "Refeeld x Project AER",
-      audio: "https://archive.org/download/your-best-option-original-mix/Your%20Best%20Option%20%28Original%20Mix%29.mp3",
+      audio: "https://github.com/TheXibalba/tracks/blob/main/yourBestOption.mp3?raw=true",
       color: ["#205950", "#2ab3bf"],
       id: uuidv4(),
       active: true,
@@ -18,7 +18,7 @@ import { v4 as uuidv4 } from "uuid";
       cover:
         "https://i.ibb.co/7N0sQmS/until-forever-by-gydw1n-de86bh5-fullview-Cropped.jpg",
       artist: "Yasumu",
-      audio: "https://archive.org/download/yasumu-until-forever-1/Yasumu%20-%20Until%20Forever~1.mp3",
+      audio: "https://github.com/TheXibalba/tracks/blob/main/untilForever.mp3?raw=true",
       color: ["#205950", "#2ab3bf"],
       id: uuidv4(),
       active: false,
